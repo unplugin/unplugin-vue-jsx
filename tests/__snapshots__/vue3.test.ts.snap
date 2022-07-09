@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`Vue 3 > basic 1`] = `
+"import { createVNode as _createVNode } from \\"vue\\";
+
+_createVNode(\\"div\\", null, null);"
+`;
+
+exports[`Vue 3 > basic 2`] = `
+"import { createVNode as _createVNode } from \\"vue\\";
+
+_createVNode(\\"div\\", {
+  \\"key\\": \\"1\\"
+}, null);"
+`;
+
+exports[`Vue 3 > basic 3`] = `
+"import { createVNode as _createVNode } from \\"vue\\";
+
+_createVNode(\\"div\\", {
+  \\"foo\\": 'bar'
+}, null);"
+`;
+
+exports[`Vue 3 > typescript 1`] = `
+"import { createVNode as _createVNode } from \\"vue\\";
+
+const foo: any = _createVNode(\\"div\\", null, null);"
+`;

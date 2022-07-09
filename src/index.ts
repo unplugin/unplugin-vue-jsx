@@ -1,25 +1,53 @@
 import { createUnplugin } from 'unplugin'
 import { createFilter } from '@rollup/pluginutils'
 import { resolveOption } from './core/options'
-import type { Options } from './core/options'
+import type { UnpluginOptions } from 'unplugin'
+import type { Options, OptionsResolved } from './core/options'
 
-export default createUnplugin<Options>((options = {}) => {
-  const opt = resolveOption(options)
-  const filter = createFilter(opt.include, opt.exclude)
+export default createUnplugin<Options>((userOptions = {}) => {
+  let options: OptionsResolved
+  let filter: (id: unknown) => boolean
 
   const name = 'unplugin-vue-jsx'
-  return {
+  const factory: UnpluginOptions = {
     name,
-    enforce: undefined,
+
+    async buildStart() {
+      options = await resolveOption(userOptions)
+      filter = createFilter(options.include, options.exclude)
+    },
 
     transformInclude(id) {
       return filter(id)
     },
 
-    transform(code, id) {
-      // eslint-disable-next-line no-console
-      console.log(code, id)
-      return undefined
+    async transform(code, id) {
+      let result: { code: string; map: any } | undefined
+      if (options.version === 2) {
+        // Vue 2
+        const { transformVue2 } = await import('./core/vue2')
+        result = await transformVue2(code, id, options)
+      } else {
+        // Vue 3
+        const { transformVue3 } = await import('./core/vue3')
+        result = await transformVue3(code, id, options)
+      }
+
+      if (!result?.code) return
+      return {
+        code: result.code,
+        map: result.map as any,
+      }
+    },
+
+    vite: {
+      configResolved(config) {
+        userOptions.root = config.root
+        userOptions.sourceMap =
+          config.command === 'serve' || !!config.build.sourcemap
+      },
     },
   }
+
+  return factory
 })

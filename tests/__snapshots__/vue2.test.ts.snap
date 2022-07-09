@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`Vue 2 > basic 1`] = `"h(\\"div\\");"`;
+
+exports[`Vue 2 > basic 2`] = `
+"h(\\"div\\", {
+  \\"key\\": \\"1\\"
+});"
+`;
+
+exports[`Vue 2 > basic 3`] = `
+"h(\\"div\\", {
+  \\"attrs\\": {
+    \\"foo\\": 'bar'
+  }
+});"
+`;
+
+exports[`Vue 2 > typescript 1`] = `"const foo: any = h(\\"div\\");"`;
