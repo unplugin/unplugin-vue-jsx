@@ -80,6 +80,28 @@ module.exports = {
 
 <br></details>
 
+## Configuration
+
+The following show the default values of the configuration.
+
+```ts
+VueJsx({
+  // filters for transforming targets
+  include: [/\.[jt]sx?$/],
+  exclude: undefined,
+
+  root: process.cwd(),
+  sourceMap: true,
+
+  /** detect vue version from node_modules automatically */
+  version: 'auto',
+
+  // extra options from babel plugin
+  // Vue 2 options: https://github.com/vuejs/jsx-vue2/tree/dev/packages/babel-preset-jsx#usage
+  // Vue 3 options: https://github.com/vuejs/babel-plugin-jsx#options
+})
+```
+
 ## Sponsors
 
 <p align="center">
