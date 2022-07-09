@@ -15,7 +15,7 @@ export const transformVue2 = async (
     babelrc: false,
     configFile: false,
     plugins: [],
-    presets: [vue2Jsx],
+    presets: [[vue2Jsx, options]],
     sourceMaps: options.sourceMap,
     sourceFileName: id,
   }

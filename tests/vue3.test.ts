@@ -1,9 +1,17 @@
 import { describe, expect, test } from 'vitest'
 import { resolveOption } from '../src/core/options'
 import { transformVue3 } from '../src/core/vue3'
+import type { Options } from '../src/core/options'
 
-const transform = async (code: string, isTS = false) => {
-  const options = await resolveOption({ version: 3 })
+const transform = async (
+  code: string,
+  isTS = false,
+  userOptions: Options = {}
+) => {
+  const options = await resolveOption({
+    version: 3,
+    ...userOptions,
+  })
   return (await transformVue3(code, `foo.${isTS ? 'tsx' : 'jsx'}`, options))
     ?.code
 }
@@ -17,5 +25,20 @@ describe('Vue 3', async () => {
 
   test('typescript', async () => {
     expect(await transform('const foo: any = <div />', true)).toMatchSnapshot()
+  })
+
+  test('custom options', async () => {
+    expect(
+      await transform(`<input on={{ click: a }} />`, false, {
+        version: 3,
+        transformOn: false,
+      })
+    ).toMatchSnapshot()
+    expect(
+      await transform(`<input on={{ click: a }} />`, false, {
+        version: 3,
+        transformOn: true,
+      })
+    ).toMatchSnapshot()
   })
 })

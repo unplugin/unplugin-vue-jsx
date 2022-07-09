@@ -16,4 +16,34 @@ exports[`Vue 2 > basic 3`] = `
 });"
 `;
 
+exports[`Vue 2 > custom options 1`] = `
+"h(\\"input\\", {
+  \\"directives\\": [{
+    name: \\"model\\",
+    value: refa
+  }]
+});"
+`;
+
+exports[`Vue 2 > custom options 2`] = `
+"import _mergeJSXProps from \\"@vue/babel-helper-vue-jsx-merge-props\\";
+h(\\"input\\", _mergeJSXProps([{
+  \\"on\\": {
+    \\"input\\": $event => {
+      if ($event.target.composing) return;
+      refa = $event.target.value;
+    }
+  },
+  \\"domProps\\": {
+    \\"value\\": refa
+  }
+}, {
+  directives: [{
+    name: \\"model\\",
+    value: refa,
+    modifiers: {}
+  }]
+}]));"
+`;
+
 exports[`Vue 2 > typescript 1`] = `"const foo: any = h(\\"div\\");"`;

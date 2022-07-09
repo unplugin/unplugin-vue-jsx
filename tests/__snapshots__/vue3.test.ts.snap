@@ -22,6 +22,25 @@ _createVNode(\\"div\\", {
 }, null);"
 `;
 
+exports[`Vue 3 > custom options 1`] = `
+"import { createVNode as _createVNode } from \\"vue\\";
+
+_createVNode(\\"input\\", {
+  \\"on\\": {
+    click: a
+  }
+}, null);"
+`;
+
+exports[`Vue 3 > custom options 2`] = `
+"import _transformOn from \\"@vue/babel-helper-vue-transform-on\\";
+import { createVNode as _createVNode } from \\"vue\\";
+
+_createVNode(\\"input\\", _transformOn({
+  click: a
+}), null);"
+`;
+
 exports[`Vue 3 > typescript 1`] = `
 "import { createVNode as _createVNode } from \\"vue\\";
 

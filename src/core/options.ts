@@ -39,6 +39,7 @@ export async function resolveOption(
   } else version = options.version || 3
 
   return {
+    ...options,
     include: options.include || [/\.[jt]sx?$/],
     exclude: options.exclude || undefined,
     version,
