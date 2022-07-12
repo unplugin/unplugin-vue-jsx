@@ -1,6 +1,6 @@
 {
   "name": "unplugin-vue-jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@7.2.1",
   "description": "Vue JSX plugin for both Vue 2 and 3. Supports Rollup, Vite, esbuild and Webpack.",
   "keywords": [
