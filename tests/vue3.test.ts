@@ -16,7 +16,7 @@ const transform = async (
     ?.code
 }
 
-describe('Vue 3', async () => {
+describe('Vue 3', () => {
   test('basic', async () => {
     expect(await transform('<div />')).toMatchSnapshot()
     expect(await transform('<div key="1" />')).toMatchSnapshot()

@@ -7,7 +7,7 @@ import { isTS } from './utils'
 import type { TransformOptions } from '@babel/core'
 import type { OptionsResolved } from './options'
 
-export const transformVue2 = async (
+export const transformVue2 = (
   code: string,
   id: string,
   options: OptionsResolved
