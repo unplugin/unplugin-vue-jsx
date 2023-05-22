@@ -91,16 +91,16 @@
     "@types/babel__core": "^7.20.0",
     "@types/node": "^20.1.2",
     "bumpp": "^9.1.0",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-define-config": "^1.20.0",
     "fast-glob": "^3.2.12",
     "prettier": "^2.8.8",
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
-    "vite": "^4.3.6",
-    "vitest": "^0.31.0",
-    "vue": "^3.3.2"
+    "vite": "^4.3.8",
+    "vitest": "^0.31.1",
+    "vue": "^3.3.4"
   },
   "engines": {
     "node": ">=14.19.0"
