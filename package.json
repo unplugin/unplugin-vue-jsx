@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-jsx",
   "version": "0.2.0",
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "description": "Vue JSX plugin for both Vue 2 and 3. Supports Rollup, Vite, esbuild and Webpack.",
   "keywords": [
     "unplugin",
@@ -76,7 +76,7 @@
     "vue": "^2.0.0 || ^3.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.21.8",
+    "@babel/core": "^7.22.1",
     "@babel/plugin-syntax-typescript": "^7.21.4",
     "@rollup/pluginutils": "^5.0.2",
     "@vue/babel-plugin-jsx": "^1.1.1",
@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^2.4.6",
-    "@types/babel__core": "^7.20.0",
+    "@types/babel__core": "^7.20.1",
     "@types/node": "^20.1.2",
     "bumpp": "^9.1.0",
     "eslint": "^8.41.0",
@@ -98,7 +98,7 @@
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
-    "vite": "^4.3.8",
+    "vite": "^4.3.9",
     "vitest": "^0.31.1",
     "vue": "^3.3.4"
   },
