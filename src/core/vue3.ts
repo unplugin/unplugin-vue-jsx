@@ -1,10 +1,9 @@
-import { transform } from '@babel/core'
+import { type TransformOptions, transform } from '@babel/core'
 import vue3Jsx from '@vue/babel-plugin-jsx'
 // @ts-expect-error
 import TS from '@babel/plugin-syntax-typescript'
 import { isTS } from './utils'
-import type { TransformOptions } from '@babel/core'
-import type { OptionsResolved } from './options'
+import { type OptionsResolved } from './options'
 
 export const transformVue3 = (
   code: string,

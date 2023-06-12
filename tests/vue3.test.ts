@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
-import { resolveOption } from '../src/core/options'
+import { type Options, resolveOption } from '../src/core/options'
 import { transformVue3 } from '../src/core/vue3'
-import type { Options } from '../src/core/options'
 
 const transform = async (
   code: string,

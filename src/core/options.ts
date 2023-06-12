@@ -1,6 +1,6 @@
 import { getPackageInfo } from 'local-pkg'
-import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
-import type { FilterPattern } from '@rollup/pluginutils'
+import { type VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
+import { type FilterPattern } from '@rollup/pluginutils'
 
 export type Vue2JSXOptions = {
   functional?: boolean
