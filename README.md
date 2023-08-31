@@ -1,6 +1,6 @@
 # unplugin-vue-jsx [![npm](https://img.shields.io/npm/v/unplugin-vue-jsx.svg)](https://npmjs.com/package/unplugin-vue-jsx)
 
-[![Unit Test](https://github.com/sxzz/unplugin-vue-jsx/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sxzz/unplugin-vue-jsx/actions/workflows/unit-test.yml)
+[![Unit Test](https://github.com/unplugin/unplugin-vue-jsx/actions/workflows/unit-test.yml/badge.svg)](https://github.com/unplugin/unplugin-vue-jsx/actions/workflows/unit-test.yml)
 
 - Vue JSX plugin for both Vue 2 and 3.
 - Supports Rollup, Vite, esbuild and Webpack.

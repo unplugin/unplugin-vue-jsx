@@ -2,7 +2,7 @@
   "name": "unplugin-vue-jsx",
   "version": "0.2.2",
   "packageManager": "pnpm@8.7.0",
-  "description": "Vue JSX plugin for both Vue 2 and 3. Supports Rollup, Vite, esbuild and Webpack.",
+  "description": "Vue JSX plugin for both Vue 2 and 3.",
   "keywords": [
     "unplugin",
     "rollup",
@@ -11,13 +11,13 @@
     "webpack"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/sxzz/unplugin-vue-jsx#readme",
+  "homepage": "https://github.com/unplugin/unplugin-vue-jsx#readme",
   "bugs": {
-    "url": "https://github.com/sxzz/unplugin-vue-jsx/issues"
+    "url": "https://github.com/unplugin/unplugin-vue-jsx/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sxzz/unplugin-vue-jsx.git"
+    "url": "git+https://github.com/unplugin/unplugin-vue-jsx.git"
   },
   "author": "三咲智子 <sxzz@sxzz.moe>",
   "files": [
