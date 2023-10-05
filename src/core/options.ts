@@ -51,5 +51,5 @@ export async function resolveOption(
 async function getVueVersion(root: string) {
   const pkg = await getPackageInfo('vue', { paths: [root] })
   if (!pkg) return 3
-  return pkg.version.startsWith('2') ? 2 : 3
+  return pkg.version?.startsWith('2') ? 2 : 3
 }
