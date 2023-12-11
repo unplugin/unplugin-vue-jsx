@@ -1,49 +1,49 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Vue 2 > basic 1`] = `"h(\\"div\\");"`;
+exports[`Vue 2 > basic 1`] = `"h("div");"`;
 
 exports[`Vue 2 > basic 2`] = `
-"h(\\"div\\", {
-  \\"key\\": \\"1\\"
+"h("div", {
+  "key": "1"
 });"
 `;
 
 exports[`Vue 2 > basic 3`] = `
-"h(\\"div\\", {
-  \\"attrs\\": {
-    \\"foo\\": 'bar'
+"h("div", {
+  "attrs": {
+    "foo": 'bar'
   }
 });"
 `;
 
 exports[`Vue 2 > custom options 1`] = `
-"h(\\"input\\", {
-  \\"directives\\": [{
-    name: \\"model\\",
+"h("input", {
+  "directives": [{
+    name: "model",
     value: refa
   }]
 });"
 `;
 
 exports[`Vue 2 > custom options 2`] = `
-"import _mergeJSXProps from \\"@vue/babel-helper-vue-jsx-merge-props\\";
-h(\\"input\\", _mergeJSXProps([{
-  \\"on\\": {
-    \\"input\\": $event => {
+"import _mergeJSXProps from "@vue/babel-helper-vue-jsx-merge-props";
+h("input", _mergeJSXProps([{
+  "on": {
+    "input": $event => {
       if ($event.target.composing) return;
       refa = $event.target.value;
     }
   },
-  \\"domProps\\": {
-    \\"value\\": refa
+  "domProps": {
+    "value": refa
   }
 }, {
   directives: [{
-    name: \\"model\\",
+    name: "model",
     value: refa,
     modifiers: {}
   }]
 }]));"
 `;
 
-exports[`Vue 2 > typescript 1`] = `"const foo: any = h(\\"div\\");"`;
+exports[`Vue 2 > typescript 1`] = `"const foo: any = h("div");"`;
