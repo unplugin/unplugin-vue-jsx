@@ -26,13 +26,13 @@ describe('Vue 2', () => {
       await transform(`<input vModel={refa} />`, {
         version: 2,
         vModel: false,
-      })
+      }),
     ).toMatchSnapshot()
     expect(
       await transform(`<input vModel={refa} />`, {
         version: 2,
         vModel: true,
-      })
+      }),
     ).toMatchSnapshot()
   })
 })
