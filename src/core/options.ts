@@ -26,8 +26,9 @@ interface OptionsVue3 extends VueJSXPluginOptions {
   version: 3
 }
 
-export type OptionsResolved = Omit<Required<Options>, 'version'> & {
+export type OptionsResolved = Omit<Required<Options>, 'version' | 'exclude'> & {
   version: 2 | 3
+  exclude?: Options['exclude']
 }
 
 export async function resolveOption(
