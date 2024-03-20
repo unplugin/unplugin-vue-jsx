@@ -3,12 +3,12 @@ import vue3Jsx from '@vue/babel-plugin-jsx'
 // @ts-expect-error
 import TS from '@babel/plugin-syntax-typescript'
 import { isTS } from './utils'
-import { type OptionsResolved } from './options'
+import type { OptionsResolved } from './options'
 
 export const transformVue3 = (
   code: string,
   id: string,
-  options: OptionsResolved
+  options: OptionsResolved,
 ) => {
   const transformOptions: TransformOptions = {
     babelrc: false,

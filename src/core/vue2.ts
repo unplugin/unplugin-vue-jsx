@@ -4,12 +4,12 @@ import TS from '@babel/plugin-syntax-typescript'
 // @ts-expect-error
 import vue2Jsx from '@vue/babel-preset-jsx'
 import { isTS } from './utils'
-import { type OptionsResolved } from './options'
+import type { OptionsResolved } from './options'
 
 export const transformVue2 = (
   code: string,
   id: string,
-  options: OptionsResolved
+  options: OptionsResolved,
 ) => {
   const transformOptions: TransformOptions = {
     babelrc: false,

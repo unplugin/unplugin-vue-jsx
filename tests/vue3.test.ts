@@ -5,7 +5,7 @@ import { transformVue3 } from '../src/core/vue3'
 const transform = async (
   code: string,
   isTS = false,
-  userOptions: Options = {}
+  userOptions: Options = {},
 ) => {
   const options = await resolveOption({
     version: 3,
@@ -31,13 +31,13 @@ describe('Vue 3', () => {
       await transform(`<input on={{ click: a }} />`, false, {
         version: 3,
         transformOn: false,
-      })
+      }),
     ).toMatchSnapshot()
     expect(
       await transform(`<input on={{ click: a }} />`, false, {
         version: 3,
         transformOn: true,
-      })
+      }),
     ).toMatchSnapshot()
   })
 })

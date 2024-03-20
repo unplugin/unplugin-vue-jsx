@@ -1,6 +1,7 @@
+import process from 'node:process'
 import { getPackageInfo } from 'local-pkg'
-import { type VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
-import { type FilterPattern } from '@rollup/pluginutils'
+import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
+import type { FilterPattern } from '@rollup/pluginutils'
 
 export type Vue2JSXOptions = {
   functional?: boolean
@@ -30,7 +31,7 @@ export type OptionsResolved = Omit<Required<Options>, 'version'> & {
 }
 
 export async function resolveOption(
-  options: Options
+  options: Options,
 ): Promise<OptionsResolved> {
   const root = options.root || process.cwd()
   let version: 2 | 3

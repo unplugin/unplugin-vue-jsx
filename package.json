@@ -3,6 +3,7 @@
   "version": "0.2.2",
   "packageManager": "pnpm@8.15.5",
   "description": "Vue JSX plugin for both Vue 2 and 3.",
+  "type": "commonjs",
   "keywords": [
     "unplugin",
     "rollup",
@@ -82,7 +83,7 @@
     "unplugin": "^1.10.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^3.8.6",
+    "@sxzz/eslint-config": "^3.8.7",
     "@sxzz/prettier-config": "^2.0.1",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^20.11.30",
