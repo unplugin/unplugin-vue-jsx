@@ -6,7 +6,7 @@ import {
   resolveOption,
 } from './core/options'
 
-export default createUnplugin<Options>((userOptions = {}) => {
+export default createUnplugin<Options | undefined>((userOptions = {}) => {
   let options: OptionsResolved
   let filter: (id: unknown) => boolean
 
