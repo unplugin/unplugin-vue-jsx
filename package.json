@@ -83,7 +83,7 @@
     "unplugin": "^1.10.1"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^3.13.0",
+    "@sxzz/eslint-config": "^4.1.1",
     "@sxzz/prettier-config": "^2.0.2",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^20.14.2",
