@@ -80,7 +80,7 @@
     "@vue/babel-preset-jsx": "^1.4.0",
     "local-pkg": "^0.5.0",
     "magic-string": "^0.30.10",
-    "unplugin": "^1.10.1"
+    "unplugin": "^2.1.0"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^4.1.1",
