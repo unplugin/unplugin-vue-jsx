@@ -29,8 +29,8 @@ _createVNode("input", {
 `;
 
 exports[`Vue 3 > custom options 2`] = `
-"import _transformOn from "@vue/babel-helper-vue-transform-on";
-import { createVNode as _createVNode } from "vue";
+"import { createVNode as _createVNode } from "vue";
+import _transformOn from "@vue/babel-helper-vue-transform-on";
 _createVNode("input", _transformOn({
   click: a
 }), null);"
