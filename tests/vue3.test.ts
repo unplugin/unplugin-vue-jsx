@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { type Options, resolveOption } from '../src/core/options'
+import { resolveOption, type Options } from '../src/core/options'
 import { transformVue3 } from '../src/core/vue3'
 
 const transform = async (

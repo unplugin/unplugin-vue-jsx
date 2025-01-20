@@ -1,7 +1,7 @@
-import { type TransformOptions, transform } from '@babel/core'
-import vue3Jsx from '@vue/babel-plugin-jsx'
+import { transform, type TransformOptions } from '@babel/core'
 // @ts-expect-error
 import TS from '@babel/plugin-syntax-typescript'
+import vue3Jsx from '@vue/babel-plugin-jsx'
 import { isTS } from './utils'
 import type { OptionsResolved } from './options'
 

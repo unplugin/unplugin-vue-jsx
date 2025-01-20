@@ -1,7 +1,7 @@
 import process from 'node:process'
 import { getPackageInfo } from 'local-pkg'
-import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
 import type { FilterPattern } from '@rollup/pluginutils'
+import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
 
 export type Vue2JSXOptions = {
   functional?: boolean

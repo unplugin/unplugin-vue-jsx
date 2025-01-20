@@ -1,4 +1,4 @@
-import { type TransformOptions, transform } from '@babel/core'
+import { transform, type TransformOptions } from '@babel/core'
 // @ts-expect-error
 import TS from '@babel/plugin-syntax-typescript'
 // @ts-expect-error
