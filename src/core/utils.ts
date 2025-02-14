@@ -1,1 +1,1 @@
-export const isTS = (id: string): boolean => /\.tsx?$/.test(id)
+export const isTS = (id: string): boolean => /\.[cm]?tsx?$/.test(id)
