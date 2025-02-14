@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest'
-import { resolveOption, type Options } from '../src/core/options'
+import { resolveOptions, type Options } from '../src/core/options'
 import { transformVue2 } from '../src/core/vue2'
 
 const transform = async (code: string, userOptions: Options = {}) => {
-  const options = await resolveOption({
+  const options = await resolveOptions({
     version: 2,
     ...userOptions,
   })

@@ -1,5 +1,5 @@
 import process from 'node:process'
-import { getPackageInfo } from 'local-pkg'
+import { getPackageInfoSync } from 'local-pkg'
 import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
 import type { FilterPattern } from 'unplugin-utils'
 
@@ -31,27 +31,24 @@ export type OptionsResolved = Omit<Required<Options>, 'version' | 'exclude'> & {
   exclude?: Options['exclude']
 }
 
-export async function resolveOption(
-  options: Options,
-): Promise<OptionsResolved> {
+export function resolveOptions(options: Options): OptionsResolved {
   const root = options.root || process.cwd()
   let version: 2 | 3
   if (options.version === 'auto') {
-    version = await getVueVersion(root)
+    version = getVueVersion(root)
   } else version = options.version || 3
 
   return {
     ...options,
     include: options.include || [/\.[jt]sx?$/],
-    exclude: options.exclude || undefined,
+    exclude: options.exclude || [/node_modules/],
     version,
     root,
     sourceMap: options.sourceMap ?? true,
   }
 }
 
-async function getVueVersion(root: string) {
-  const pkg = await getPackageInfo('vue', { paths: [root] })
-  if (!pkg) return 3
-  return pkg.version?.startsWith('2') ? 2 : 3
+function getVueVersion(root: string) {
+  const pkg = getPackageInfoSync('vue', { paths: [root] })
+  return pkg?.version?.startsWith('2') ? 2 : 3
 }

@@ -1,28 +1,14 @@
-import {
-  createUnplugin,
-  type UnpluginInstance,
-  type UnpluginOptions,
-} from 'unplugin'
+import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import { createFilter } from 'unplugin-utils'
-import {
-  resolveOption,
-  type Options,
-  type OptionsResolved,
-} from './core/options'
+import { resolveOptions, type Options } from './core/options'
 
 const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (userOptions = {}) => {
-    let options: OptionsResolved
-    let filter: (id: unknown) => boolean
+    const options = resolveOptions(userOptions)
+    const filter = createFilter(options.include, options.exclude)
 
-    const name = 'unplugin-vue-jsx'
-    const factory: UnpluginOptions = {
-      name,
-
-      async buildStart() {
-        options = await resolveOption(userOptions)
-        filter = createFilter(options.include, options.exclude)
-      },
+    return {
+      name: 'unplugin-vue-jsx',
 
       transformInclude(id) {
         return filter(id)
@@ -33,11 +19,11 @@ const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
         if (options.version === 2) {
           // Vue 2
           const { transformVue2 } = await import('./core/vue2')
-          result = await transformVue2(code, id, options)
+          result = transformVue2(code, id, options)
         } else {
           // Vue 3
           const { transformVue3 } = await import('./core/vue3')
-          result = await transformVue3(code, id, options)
+          result = transformVue3(code, id, options)
         }
 
         if (!result?.code) return
@@ -55,8 +41,6 @@ const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
         },
       },
     }
-
-    return factory
   },
 )
 export default VueJsx
