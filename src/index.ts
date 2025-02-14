@@ -1,9 +1,9 @@
-import { createFilter } from '@rollup/pluginutils'
 import {
   createUnplugin,
   type UnpluginInstance,
   type UnpluginOptions,
 } from 'unplugin'
+import { createFilter } from 'unplugin-utils'
 import {
   resolveOption,
   type Options,
