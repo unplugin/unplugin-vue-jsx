@@ -1,6 +1,6 @@
 {
   "name": "unplugin-vue-jsx",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "packageManager": "pnpm@10.4.0",
   "description": "Vue JSX plugin for both Vue 2 and 3.",
   "type": "module",
