@@ -10,7 +10,7 @@ export const transformVue2 = (
   code: string,
   id: string,
   options: OptionsResolved,
-) => {
+): { code: string; map: any } | undefined => {
   const transformOptions: TransformOptions = {
     babelrc: false,
     configFile: false,
