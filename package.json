@@ -63,8 +63,8 @@
     "vue": "^2.0.0 || ^3.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/plugin-syntax-typescript": "^7.25.9",
+    "@babel/core": "^7.27.1",
+    "@babel/plugin-syntax-typescript": "^7.27.1",
     "@vue/babel-plugin-jsx": "^1.4.0",
     "@vue/babel-preset-jsx": "^1.4.0",
     "local-pkg": "^1.1.1",
@@ -73,17 +73,17 @@
     "unplugin-utils": "^0.2.4"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^6.1.2",
+    "@sxzz/eslint-config": "^6.2.0",
     "@sxzz/prettier-config": "^2.2.1",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.3",
     "bumpp": "^10.1.0",
-    "eslint": "^9.25.1",
+    "eslint": "^9.26.0",
     "prettier": "^3.5.3",
-    "tsdown": "^0.9.9",
-    "tsx": "^4.19.3",
+    "tsdown": "^0.10.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "vite": "^6.3.3",
+    "vite": "^6.3.4",
     "vitest": "^3.1.2",
     "vue": "^3.5.13"
   },
