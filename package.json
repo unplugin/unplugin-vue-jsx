@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-jsx",
   "version": "0.6.1",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "description": "Vue JSX plugin for both Vue 2 and 3.",
   "type": "module",
   "keywords": [
@@ -65,25 +65,25 @@
   "dependencies": {
     "@babel/core": "^7.28.0",
     "@babel/plugin-syntax-typescript": "^7.27.1",
-    "@vue/babel-plugin-jsx": "^1.4.0",
+    "@vue/babel-plugin-jsx": "^1.5.0",
     "@vue/babel-preset-jsx": "^1.4.0",
     "local-pkg": "^1.1.1",
     "magic-string": "^0.30.17",
     "unplugin": "^2.3.5",
-    "unplugin-utils": "^0.2.4"
+    "unplugin-utils": "^0.2.5"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.0.6",
+    "@sxzz/eslint-config": "^7.1.2",
     "@sxzz/prettier-config": "^2.2.3",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^22.16.5",
-    "bumpp": "^10.2.0",
-    "eslint": "^9.32.0",
+    "@types/node": "^22.17.1",
+    "bumpp": "^10.2.2",
+    "eslint": "^9.33.0",
     "prettier": "^3.6.2",
-    "tsdown": "^0.13.0",
+    "tsdown": "^0.14.0",
     "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.6",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.1",
     "vitest": "^3.2.4",
     "vue": "^3.5.18"
   },
