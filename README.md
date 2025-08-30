@@ -117,6 +117,9 @@ VueJsx({
     ],
   },
 
+  // Use extra babel plugins
+  babelPlugins: [],
+
   // Extra options from Vue Babel plugin: https://github.com/vuejs/babel-plugin-jsx#options
   // ...
 })

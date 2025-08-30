@@ -63,11 +63,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.28.3",
-    "@babel/plugin-syntax-typescript": "^7.27.1",
     "@vue/babel-plugin-jsx": "^1.5.0",
     "unplugin": "^2.3.9"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-typescript": "^7.27.1",
     "@sxzz/eslint-config": "^7.1.4",
     "@sxzz/prettier-config": "^2.2.4",
     "@types/babel__core": "^7.20.5",

@@ -19,6 +19,11 @@ _createVNode("div", {
 }, null);"
 `;
 
+exports[`Vue 3 > custom babel plugins 1`] = `
+"import { createVNode as _createVNode } from "vue";
+const x: string = _createVNode("div", null, null);"
+`;
+
 exports[`Vue 3 > custom options 1`] = `
 "import { createVNode as _createVNode } from "vue";
 _createVNode("input", {

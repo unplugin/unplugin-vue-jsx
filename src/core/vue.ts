@@ -1,6 +1,4 @@
 import { transform, type TransformOptions } from '@babel/core'
-// @ts-expect-error
-import BabelTS from '@babel/plugin-syntax-typescript'
 import BabelVueJsx from '@vue/babel-plugin-jsx'
 import type { OptionsResolved } from './options'
 
@@ -18,7 +16,7 @@ export function transformVueJsx(
   const transformOptions: TransformOptions = {
     babelrc: false,
     configFile: false,
-    plugins: [[BabelVueJsx, options]],
+    plugins: [[BabelVueJsx, options], ...options.babelPlugins],
     sourceMaps: options.sourceMap,
     sourceFileName: id,
     parserOpts: {

@@ -1,3 +1,5 @@
+// @ts-expect-error
+import BabelTS from '@babel/plugin-syntax-typescript'
 import { describe, expect, test } from 'vitest'
 import { resolveOptions, type Options } from '../src/core/options'
 import { transformVueJsx } from '../src/core/vue'
@@ -31,7 +33,7 @@ describe('Vue 3', () => {
     ).toMatchSnapshot()
   })
 
-  test.only('custom parser plugins', () => {
+  test('custom parser plugins', () => {
     expect(
       transform(`@x class X {}; const x = <div />`, false, {
         parserOpts: {
@@ -45,6 +47,14 @@ describe('Vue 3', () => {
         parserOpts: {
           plugins: ['decorators-legacy'],
         },
+      }),
+    ).toMatchSnapshot()
+  })
+
+  test('custom babel plugins', () => {
+    expect(
+      transform(`const x: string = <div />`, true, {
+        babelPlugins: [[BabelTS, { isTSX: true }]],
       }),
     ).toMatchSnapshot()
   })
