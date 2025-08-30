@@ -4,8 +4,8 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Unit Test][unit-test-src]][unit-test-href]
 
-- Vue JSX plugin for both Vue 2 and 3.
-- Supports Rollup, Vite, esbuild and Webpack.
+- Vue JSX plugin for Vue 3.
+- Supports Rollup, Rolldown, Vite, esbuild, Webpack and more.
 
 ## Installation
 
@@ -108,16 +108,9 @@ VueJsx({
   // filters for transforming targets
   include: [/\.[jt]sx?$/],
   exclude: undefined,
-
-  root: process.cwd(),
   sourceMap: true,
 
-  /** detect vue version from node_modules automatically */
-  version: 'auto',
-
-  // extra options from babel plugin
-  // Vue 2 options: https://github.com/vuejs/jsx-vue2/tree/dev/packages/babel-preset-jsx#usage
-  // Vue 3 options: https://github.com/vuejs/babel-plugin-jsx#options
+  // extra options from babel plugin: https://github.com/vuejs/babel-plugin-jsx#options
 })
 ```
 
