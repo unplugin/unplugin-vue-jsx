@@ -30,14 +30,15 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./vite": "./dist/vite.js",
-    "./webpack": "./dist/webpack.js",
-    "./rspack": "./dist/rspack.js",
-    "./rollup": "./dist/rollup.js",
-    "./rolldown": "./dist/rolldown.js",
+    "./api": "./dist/api.js",
     "./esbuild": "./dist/esbuild.js",
     "./farm": "./dist/farm.js",
-    "./*": "./*"
+    "./rolldown": "./dist/rolldown.js",
+    "./rollup": "./dist/rollup.js",
+    "./rspack": "./dist/rspack.js",
+    "./vite": "./dist/vite.js",
+    "./webpack": "./dist/webpack.js",
+    "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
@@ -67,7 +68,6 @@
     "@babel/plugin-syntax-typescript": "^7.27.1",
     "@vue/babel-plugin-jsx": "^1.5.0",
     "@vue/babel-preset-jsx": "^1.4.0",
-    "magic-string": "^0.30.18",
     "unplugin": "^2.3.9",
     "unplugin-utils": "^0.3.0"
   },

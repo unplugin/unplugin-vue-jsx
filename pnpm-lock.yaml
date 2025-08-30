@@ -20,9 +20,6 @@ importers:
       '@vue/babel-preset-jsx':
         specifier: ^1.4.0
         version: 1.4.0(@babel/core@7.28.3)(vue@3.5.20(typescript@5.9.2))
-      magic-string:
-        specifier: ^0.30.18
-        version: 0.30.18
       unplugin:
         specifier: ^2.3.9
         version: 2.3.9
