@@ -9,7 +9,8 @@
     "rollup",
     "vite",
     "esbuild",
-    "webpack"
+    "webpack",
+    "rolldown"
   ],
   "license": "MIT",
   "homepage": "https://github.com/unplugin/unplugin-vue-jsx#readme",
@@ -20,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/unplugin/unplugin-vue-jsx.git"
   },
-  "author": "三咲智子 Kevin Deng <sxzz@sxzz.moe>",
+  "author": "Kevin Deng <sxzz@sxzz.moe>",
   "funding": "https://github.com/sponsors/sxzz",
   "files": [
     "dist"
@@ -57,7 +58,7 @@
     "build": "tsdown",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
