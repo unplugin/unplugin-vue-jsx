@@ -19,6 +19,7 @@ export function transformVueJsx(
     plugins: [[vue3Jsx, options]],
     sourceMaps: options.sourceMap,
     sourceFileName: id,
+    parserOpts: options.parserOpts,
   }
 
   if (isTS(id)) {

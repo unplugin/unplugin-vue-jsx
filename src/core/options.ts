@@ -1,3 +1,4 @@
+import type { ParserOptions } from '@babel/core'
 import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
 import type { FilterPattern } from 'unplugin'
 
@@ -6,6 +7,7 @@ export type Options = {
   exclude?: FilterPattern | undefined
   enforce?: 'pre' | 'post' | undefined
   sourceMap?: boolean
+  parserOpts?: ParserOptions
 } & VueJSXPluginOptions
 
 type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U

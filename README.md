@@ -106,11 +106,19 @@ The following show the default values of the configuration.
 ```ts
 VueJsx({
   // filters for transforming targets
-  include: [/\.[jt]sx?$/],
-  exclude: undefined,
+  include: [/\.[jt]sx$/],
+  exclude: [/node_modules/],
   sourceMap: true,
 
-  // extra options from babel plugin: https://github.com/vuejs/babel-plugin-jsx#options
+  // See https://babeljs.io/docs/babel-parser#options
+  parserOpts: {
+    plugins: [
+      /* ... */
+    ],
+  },
+
+  // Extra options from Vue Babel plugin: https://github.com/vuejs/babel-plugin-jsx#options
+  // ...
 })
 ```
 
