@@ -1,5 +1,5 @@
 import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
-import type { FilterPattern } from 'unplugin-utils'
+import type { FilterPattern } from 'unplugin'
 
 export type Options = {
   include?: FilterPattern
@@ -18,7 +18,7 @@ export type OptionsResolved = Overwrite<
 export function resolveOptions(options: Options): OptionsResolved {
   return {
     ...options,
-    include: options.include || [/\.[jt]sx?$/],
+    include: options.include || [/\.[jt]sx$/],
     exclude: options.exclude || [/node_modules/],
     sourceMap: options.sourceMap ?? true,
   }

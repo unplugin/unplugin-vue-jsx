@@ -11,7 +11,7 @@ function isTS(id: string): boolean {
 export function transformVueJsx(
   code: string,
   id: string,
-  options: OptionsResolved,
+  options: Omit<OptionsResolved, 'include' | 'exclude'>,
 ): { code: string; map: any } | undefined {
   const transformOptions: TransformOptions = {
     babelrc: false,
