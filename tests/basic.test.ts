@@ -30,4 +30,22 @@ describe('Vue 3', () => {
       }),
     ).toMatchSnapshot()
   })
+
+  test.only('custom parser plugins', () => {
+    expect(
+      transform(`@x class X {}; const x = <div />`, false, {
+        parserOpts: {
+          plugins: ['decorators-legacy'],
+        },
+      }),
+    ).toMatchSnapshot()
+
+    expect(
+      transform(`@x class X {}; const x: string = <div />`, true, {
+        parserOpts: {
+          plugins: ['decorators-legacy'],
+        },
+      }),
+    ).toMatchSnapshot()
+  })
 })

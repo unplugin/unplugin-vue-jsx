@@ -1,7 +1,7 @@
 import { transform, type TransformOptions } from '@babel/core'
 // @ts-expect-error
-import TS from '@babel/plugin-syntax-typescript'
-import vue3Jsx from '@vue/babel-plugin-jsx'
+import BabelTS from '@babel/plugin-syntax-typescript'
+import BabelVueJsx from '@vue/babel-plugin-jsx'
 import type { OptionsResolved } from './options'
 
 function isTS(id: string): boolean {
@@ -13,17 +13,21 @@ export function transformVueJsx(
   id: string,
   options: Omit<OptionsResolved, 'include' | 'exclude'>,
 ): { code: string; map: any } | undefined {
+  const tsSyntax = isTS(id)
+
   const transformOptions: TransformOptions = {
     babelrc: false,
     configFile: false,
-    plugins: [[vue3Jsx, options]],
+    plugins: [[BabelVueJsx, options]],
     sourceMaps: options.sourceMap,
     sourceFileName: id,
-    parserOpts: options.parserOpts,
-  }
-
-  if (isTS(id)) {
-    transformOptions.plugins!.push([TS, { isTSX: true }])
+    parserOpts: {
+      ...options.parserOpts,
+      plugins: [
+        ...(tsSyntax ? (['typescript', 'jsx'] as const) : []),
+        ...(options.parserOpts?.plugins || []),
+      ],
+    },
   }
 
   const result = transform(code, transformOptions)

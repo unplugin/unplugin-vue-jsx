@@ -36,6 +36,22 @@ _createVNode("input", _transformOn({
 }), null);"
 `;
 
+exports[`Vue 3 > custom parser plugins 1`] = `
+"import { createVNode as _createVNode } from "vue";
+@x
+class X {}
+;
+const x = _createVNode("div", null, null);"
+`;
+
+exports[`Vue 3 > custom parser plugins 2`] = `
+"import { createVNode as _createVNode } from "vue";
+@x
+class X {}
+;
+const x: string = _createVNode("div", null, null);"
+`;
+
 exports[`Vue 3 > typescript 1`] = `
 "import { createVNode as _createVNode } from "vue";
 const foo: any = _createVNode("div", null, null);"
