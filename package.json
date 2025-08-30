@@ -61,14 +61,10 @@
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
-  "peerDependencies": {
-    "vue": "^3.0.0"
-  },
   "dependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-syntax-typescript": "^7.27.1",
     "@vue/babel-plugin-jsx": "^1.5.0",
-    "@vue/babel-preset-jsx": "^1.4.0",
     "unplugin": "^2.3.9"
   },
   "devDependencies": {
