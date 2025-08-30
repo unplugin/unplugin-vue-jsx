@@ -2,14 +2,17 @@ import { transform, type TransformOptions } from '@babel/core'
 // @ts-expect-error
 import TS from '@babel/plugin-syntax-typescript'
 import vue3Jsx from '@vue/babel-plugin-jsx'
-import { isTS } from './utils'
 import type { OptionsResolved } from './options'
 
-export const transformVue3 = (
+function isTS(id: string): boolean {
+  return /\.[cm]?tsx?$/.test(id)
+}
+
+export function transformVueJsx(
   code: string,
   id: string,
   options: OptionsResolved,
-): { code: string; map: any } | undefined => {
+): { code: string; map: any } | undefined {
   const transformOptions: TransformOptions = {
     babelrc: false,
     configFile: false,
