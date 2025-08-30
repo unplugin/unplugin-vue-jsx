@@ -17,7 +17,7 @@ const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
         },
         handler(code, id) {
           const result = transformVueJsx(code, id, options)
-          if (!result?.code) return
+          if (!result) return
           return {
             code: result.code,
             map: result.map as any,
