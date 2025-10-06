@@ -42,6 +42,9 @@ importers:
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
+      rolldown-plugin-require-cjs:
+        specifier: ^0.3.0
+        version: 0.3.0(rolldown@1.0.0-beta.41)
       tsdown:
         specifier: ^0.15.6
         version: 0.15.6(publint@0.3.5)(typescript@5.9.3)
@@ -1189,6 +1192,9 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
+  cjs-module-lexer@2.1.0:
+    resolution: {integrity: sha512-UX0OwmYRYQQetfrLEZeewIFFI+wSTofC+pMBLNuH3RUuu/xzG1oz84UCEDOSoQlN3fZ4+AzmV50ZYvGqkMh9yA==}
+
   clean-regexp@1.0.0:
     resolution: {integrity: sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw==}
     engines: {node: '>=4'}
@@ -1893,6 +1899,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  magic-string-ast@1.0.3:
+    resolution: {integrity: sha512-CvkkH1i81zl7mmb94DsRiFeG9V2fR2JeuK8yDgS8oiZSFa++wWLEgZ5ufEOyLHbvSbD1gTRKv9NdX69Rnvr9JA==}
+    engines: {node: '>=20.19.0'}
+
   magic-string@0.30.19:
     resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
 
@@ -2259,6 +2269,12 @@ packages:
       vue-tsc:
         optional: true
 
+  rolldown-plugin-require-cjs@0.3.0:
+    resolution: {integrity: sha512-4uNL2BnLnPDSJYVKhDZMoUHYjlbOVfKh2uo1bsE3lPtomO5Tswq1E6EOQGG+xJ2H0c1dKWkdyWTIUJH2X6eO6g==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      rolldown: '*'
+
   rolldown@1.0.0-beta.41:
     resolution: {integrity: sha512-U+NPR0Bkg3wm61dteD2L4nAM1U9dtaqVrpDXwC36IKRHpEO/Ubpid4Nijpa2imPchcVNHfxVFwSSMJdwdGFUbg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -2471,6 +2487,10 @@ packages:
 
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
+
+  unplugin-utils@0.3.1:
+    resolution: {integrity: sha512-5lWVjgi6vuHhJ526bI4nlCOmkCIF3nnfXkCMDeMJrtdvxTs6ZFCM8oNufGTsDbKv/tJ/xj8RpvXjRuPBZJuJog==}
+    engines: {node: '>=20.19.0'}
 
   unplugin@2.3.10:
     resolution: {integrity: sha512-6NCPkv1ClwH+/BGE9QeoTIl09nuiAt0gS28nn1PvYXsGKRwM2TCbFA2QiilmehPDTXIe684k4rZI1yl3A1PCUw==}
@@ -3719,6 +3739,8 @@ snapshots:
     dependencies:
       consola: 3.4.2
 
+  cjs-module-lexer@2.1.0: {}
+
   clean-regexp@1.0.0:
     dependencies:
       escape-string-regexp: 1.0.5
@@ -4422,6 +4444,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  magic-string-ast@1.0.3:
+    dependencies:
+      magic-string: 0.30.19
+
   magic-string@0.30.19:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -4977,6 +5003,15 @@ snapshots:
       - oxc-resolver
       - supports-color
 
+  rolldown-plugin-require-cjs@0.3.0(rolldown@1.0.0-beta.41):
+    dependencies:
+      cjs-module-lexer: 2.1.0
+      empathic: 2.0.0
+      magic-string-ast: 1.0.3
+      mlly: 1.8.0
+      rolldown: 1.0.0-beta.41
+      unplugin-utils: 0.3.1
+
   rolldown@1.0.0-beta.41:
     dependencies:
       '@oxc-project/types': 0.93.0
@@ -5222,6 +5257,11 @@ snapshots:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
+
+  unplugin-utils@0.3.1:
+    dependencies:
+      pathe: 2.0.3
+      picomatch: 4.0.3
 
   unplugin@2.3.10:
     dependencies:
