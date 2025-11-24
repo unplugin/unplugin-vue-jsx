@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-jsx",
   "version": "0.8.1",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "description": "A Vue JSX plugin.",
   "type": "module",
   "keywords": [
@@ -64,23 +64,23 @@
   "dependencies": {
     "@babel/core": "^7.28.5",
     "@vue/babel-plugin-jsx": "^2.0.1",
-    "unplugin": "^2.3.10"
+    "unplugin": "^2.3.11"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.27.1",
-    "@sxzz/eslint-config": "^7.2.10",
-    "@sxzz/prettier-config": "^2.2.4",
+    "@sxzz/eslint-config": "^7.3.2",
+    "@sxzz/prettier-config": "^2.2.5",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.10.1",
     "bumpp": "^10.3.1",
     "eslint": "^9.39.1",
     "prettier": "^3.6.2",
     "rolldown-plugin-require-cjs": "^0.3.1",
-    "tsdown": "^0.16.4",
+    "tsdown": "^0.16.6",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "vite": "^7.2.2",
-    "vitest": "^4.0.9",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.13",
     "vue": "^3.5.24"
   },
   "engines": {
