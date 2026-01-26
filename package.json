@@ -67,7 +67,7 @@
   "dependencies": {
     "@babel/core": "^7.28.6",
     "@vue/babel-plugin-jsx": "^2.0.1",
-    "unplugin": "^2.3.11"
+    "unplugin": "^3.0.0"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.28.6",
