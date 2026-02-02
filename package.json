@@ -2,7 +2,7 @@
   "name": "unplugin-vue-jsx",
   "type": "module",
   "version": "0.8.1",
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.28.2",
   "description": "A Vue JSX plugin.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
@@ -65,17 +65,17 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@babel/core": "^7.28.6",
+    "@babel/core": "^7.29.0",
     "@vue/babel-plugin-jsx": "^2.0.1",
     "unplugin": "^3.0.0"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.28.6",
-    "@sxzz/eslint-config": "^7.5.1",
-    "@sxzz/prettier-config": "^2.2.6",
+    "@sxzz/eslint-config": "^7.6.0",
+    "@sxzz/prettier-config": "^2.3.1",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^25.0.10",
-    "@typescript/native-preview": "7.0.0-dev.20260124.1",
+    "@types/node": "^25.2.0",
+    "@typescript/native-preview": "7.0.0-dev.20260202.1",
     "bumpp": "^10.4.0",
     "eslint": "^9.39.2",
     "prettier": "^3.8.1",
