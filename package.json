@@ -75,7 +75,7 @@
     "@sxzz/prettier-config": "^2.3.1",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^25.5.2",
-    "@typescript/native-preview": "7.0.0-dev.20260405.1",
+    "@typescript/native-preview": "7.0.0-dev.20260413.1",
     "bumpp": "^11.0.1",
     "eslint": "^10.2.0",
     "prettier": "^3.8.1",
