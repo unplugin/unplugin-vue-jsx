@@ -1,4 +1,4 @@
-import { transform, type TransformOptions } from '@babel/core'
+import { transformAsync, type InputOptions } from '@babel/core'
 import BabelVueJsx from '@vue/babel-plugin-jsx'
 import type { OptionsResolved } from './options'
 
@@ -6,14 +6,14 @@ function isTS(id: string): boolean {
   return /\.[cm]?tsx?$/.test(id)
 }
 
-export function transformVueJsx(
+export async function transformVueJsx(
   code: string,
   id: string,
   options: Omit<OptionsResolved, 'include' | 'exclude'>,
-): { code: string; map: any } | undefined {
+): Promise<{ code: string; map: any } | undefined> {
   const tsSyntax = isTS(id)
 
-  const transformOptions: TransformOptions = {
+  const transformOptions: InputOptions = {
     babelrc: false,
     configFile: false,
     plugins: [[BabelVueJsx, options], ...options.babelPlugins],
@@ -28,7 +28,7 @@ export function transformVueJsx(
     },
   }
 
-  const result = transform(code, transformOptions)
+  const result = await transformAsync(code, transformOptions)
   if (!result?.code) return
 
   return {

@@ -1,41 +1,45 @@
-// @ts-expect-error
 import BabelTS from '@babel/plugin-syntax-typescript'
 import { describe, expect, test } from 'vitest'
 import { resolveOptions, type Options } from '../src/core/options'
 import { transformVueJsx } from '../src/core/vue'
 
-function transform(code: string, isTS = false, userOptions: Options = {}) {
+async function transform(
+  code: string,
+  isTS = false,
+  userOptions: Options = {},
+) {
   const options = resolveOptions(userOptions)
-  return transformVueJsx(code, `foo.${isTS ? 'tsx' : 'jsx'}`, options)?.code
+  return (await transformVueJsx(code, `foo.${isTS ? 'tsx' : 'jsx'}`, options))
+    ?.code
 }
 
 describe('Vue 3', () => {
-  test('basic', () => {
-    expect(transform('<div />')).toMatchSnapshot()
-    expect(transform('<div key="1" />')).toMatchSnapshot()
-    expect(transform("<div foo={'bar'} />")).toMatchSnapshot()
+  test('basic', async () => {
+    expect(await transform('<div />')).toMatchSnapshot()
+    expect(await transform('<div key="1" />')).toMatchSnapshot()
+    expect(await transform("<div foo={'bar'} />")).toMatchSnapshot()
   })
 
-  test('typescript', () => {
-    expect(transform('const foo: any = <div />', true)).toMatchSnapshot()
+  test('typescript', async () => {
+    expect(await transform('const foo: any = <div />', true)).toMatchSnapshot()
   })
 
-  test('custom options', () => {
+  test('custom options', async () => {
     expect(
-      transform(`<input on={{ click: a }} />`, false, {
+      await transform(`<input on={{ click: a }} />`, false, {
         transformOn: false,
       }),
     ).toMatchSnapshot()
     expect(
-      transform(`<input on={{ click: a }} />`, false, {
+      await transform(`<input on={{ click: a }} />`, false, {
         transformOn: true,
       }),
     ).toMatchSnapshot()
   })
 
-  test('custom parser plugins', () => {
+  test('custom parser plugins', async () => {
     expect(
-      transform(`@x class X {}; const x = <div />`, false, {
+      await transform(`@x class X {}; const x = <div />`, false, {
         parserOpts: {
           plugins: ['decorators-legacy'],
         },
@@ -43,7 +47,7 @@ describe('Vue 3', () => {
     ).toMatchSnapshot()
 
     expect(
-      transform(`@x class X {}; const x: string = <div />`, true, {
+      await transform(`@x class X {}; const x: string = <div />`, true, {
         parserOpts: {
           plugins: ['decorators-legacy'],
         },
@@ -51,9 +55,9 @@ describe('Vue 3', () => {
     ).toMatchSnapshot()
   })
 
-  test('custom babel plugins', () => {
+  test('custom babel plugins', async () => {
     expect(
-      transform(`const x: string = <div />`, true, {
+      await transform(`const x: string = <div />`, true, {
         babelPlugins: [[BabelTS, { isTSX: true }]],
       }),
     ).toMatchSnapshot()

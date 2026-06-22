@@ -15,12 +15,12 @@ const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
         filter: {
           id: { include, exclude },
         },
-        handler(code, id) {
-          const result = transformVueJsx(code, id, options)
+        async handler(code, id) {
+          const result = await transformVueJsx(code, id, options)
           if (!result) return
           return {
             code: result.code,
-            map: result.map as any,
+            map: result.map,
           }
         },
       },

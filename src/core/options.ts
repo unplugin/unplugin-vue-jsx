@@ -1,4 +1,4 @@
-import type { ParserOptions, PluginItem } from '@babel/core'
+import type { InputOptions, PluginItem } from '@babel/core'
 import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx'
 import type { FilterPattern } from 'unplugin'
 
@@ -7,7 +7,7 @@ export type Options = {
   exclude?: FilterPattern | undefined
   enforce?: 'pre' | 'post' | undefined
   sourceMap?: boolean
-  parserOpts?: ParserOptions
+  parserOpts?: InputOptions['parserOpts']
   babelPlugins?: PluginItem[]
 } & VueJSXPluginOptions
 
