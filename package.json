@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/core": "^8.0.0",
-    "@vue/babel-plugin-jsx": "^2.0.1",
+    "@vue/babel-plugin-jsx": "^3.0.0",
     "unplugin": "^3.0.0"
   },
   "devDependencies": {
