@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Esbuild plugin
@@ -12,9 +12,9 @@ import VueJsx from './index'
  * @example
  * ```ts
  * import { build } from 'esbuild'
- * import Starter from 'unplugin-vue-jsx/esbuild'
+ * import VueJsx from 'unplugin-vue-jsx/esbuild'
  * 
- * build({ plugins: [Starter()] })
+ * build({ plugins: [VueJsx()] })
 ```
  */
 const esbuild = VueJsx.esbuild as typeof VueJsx.esbuild

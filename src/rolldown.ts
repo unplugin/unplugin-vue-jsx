@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Rolldown plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```ts
  * // rolldown.config.js
- * import Starter from 'unplugin-vue-jsx/rolldown'
+ * import VueJsx from 'unplugin-vue-jsx/rolldown'
  *
  * export default {
- *   plugins: [Starter()],
+ *   plugins: [VueJsx()],
  * }
  * ```
  */

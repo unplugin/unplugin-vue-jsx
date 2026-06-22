@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Rspack plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```js
  * // rspack.config.js
- * import Starter from 'unplugin-vue-jsx/rspack'
+ * import VueJsx from 'unplugin-vue-jsx/rspack'
  *
- * default export {
- *  plugins: [Starter()],
+ * export default {
+ *   plugins: [VueJsx()],
  * }
  * ```
  */

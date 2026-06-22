@@ -1,7 +1,7 @@
 import BabelTS from '@babel/plugin-syntax-typescript'
 import { describe, expect, test } from 'vitest'
-import { resolveOptions, type Options } from '../src/core/options'
-import { transformVueJsx } from '../src/core/vue'
+import { resolveOptions, type Options } from '../src/core/options.ts'
+import { transformVueJsx } from '../src/core/vue.ts'
 
 async function transform(
   code: string,

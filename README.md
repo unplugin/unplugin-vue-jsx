@@ -18,10 +18,10 @@ npm i -D unplugin-vue-jsx
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-vue-jsx/vite'
+import VueJsx from 'unplugin-vue-jsx/vite'
 
 export default defineConfig({
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 })
 ```
 
@@ -32,10 +32,10 @@ export default defineConfig({
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-vue-jsx/rollup'
+import VueJsx from 'unplugin-vue-jsx/rollup'
 
 export default {
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 }
 ```
 
@@ -46,10 +46,10 @@ export default {
 
 ```ts
 // rolldown.config.js
-import Starter from 'unplugin-vue-jsx/rolldown'
+import VueJsx from 'unplugin-vue-jsx/rolldown'
 
 export default {
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 }
 ```
 
@@ -60,10 +60,10 @@ export default {
 
 ```ts
 import { build } from 'esbuild'
-import Starter from 'unplugin-vue-jsx/esbuild'
+import VueJsx from 'unplugin-vue-jsx/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 })
 ```
 
@@ -74,11 +74,11 @@ build({
 
 ```js
 // webpack.config.js
-import Starter from 'unplugin-vue-jsx/webpack'
+import VueJsx from 'unplugin-vue-jsx/webpack'
 
 export default {
   /* ... */
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 }
 ```
 
@@ -89,11 +89,11 @@ export default {
 
 ```ts
 // rspack.config.js
-import Starter from 'unplugin-vue-jsx/rspack'
+import VueJsx from 'unplugin-vue-jsx/rspack'
 
 export default {
   /* ... */
-  plugins: [Starter()],
+  plugins: [VueJsx()],
 }
 ```
 

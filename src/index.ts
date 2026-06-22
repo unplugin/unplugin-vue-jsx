@@ -1,9 +1,9 @@
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { resolveOptions, type Options } from './core/options'
-import { transformVueJsx } from './core/vue'
+import { resolveOptions, type Options } from './core/options.ts'
+import { transformVueJsx } from './core/vue.ts'
 
-const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
-  (userOptions = {}) => {
+export const VueJsx: UnpluginInstance<Options | undefined, false> =
+  createUnplugin((userOptions = {}) => {
     const { include, exclude, enforce, ...options } =
       resolveOptions(userOptions)
 
@@ -25,6 +25,4 @@ const VueJsx: UnpluginInstance<Options | undefined, false> = createUnplugin(
         },
       },
     }
-  },
-)
-export default VueJsx
+  })

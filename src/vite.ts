@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Vite plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```ts
  * // vite.config.ts
- * import Starter from 'unplugin-vue-jsx/vite'
+ * import VueJsx from 'unplugin-vue-jsx/vite'
  *
  * export default defineConfig({
- *   plugins: [Starter()],
+ *   plugins: [VueJsx()],
  * })
  * ```
  */

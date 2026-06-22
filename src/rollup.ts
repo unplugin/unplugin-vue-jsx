@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Rollup plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```ts
  * // rollup.config.js
- * import Starter from 'unplugin-vue-jsx/rollup'
+ * import VueJsx from 'unplugin-vue-jsx/rollup'
  *
  * export default {
- *   plugins: [Starter()],
+ *   plugins: [VueJsx()],
  * }
  * ```
  */

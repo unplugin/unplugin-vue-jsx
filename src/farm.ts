@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Farm plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```ts
  * // farm.config.js
- * import Starter from 'unplugin-vue-jsx/farm'
+ * import VueJsx from 'unplugin-vue-jsx/farm'
  *
  * export default {
- *   plugins: [Starter()],
+ *   plugins: [VueJsx()],
  * }
  * ```
  */

@@ -1,6 +1,6 @@
 import { transformAsync, type InputOptions } from '@babel/core'
 import BabelVueJsx from '@vue/babel-plugin-jsx'
-import type { OptionsResolved } from './options'
+import type { OptionsResolved } from './options.ts'
 
 function isTS(id: string): boolean {
   return /\.[cm]?tsx?$/.test(id)

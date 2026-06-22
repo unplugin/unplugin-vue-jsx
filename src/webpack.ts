@@ -4,7 +4,7 @@
  * @module
  */
 
-import VueJsx from './index'
+import { VueJsx } from './index.ts'
 
 /**
  * Webpack plugin
@@ -12,10 +12,10 @@ import VueJsx from './index'
  * @example
  * ```js
  * // webpack.config.js
- * import Starter from 'unplugin-vue-jsx/webpack'
+ * import VueJsx from 'unplugin-vue-jsx/webpack'
  *
- * default export {
- *  plugins: [Starter()],
+ * export default {
+ *   plugins: [VueJsx()],
  * }
  * ```
  */
