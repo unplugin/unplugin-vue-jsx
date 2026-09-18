@@ -2,7 +2,13 @@
   "name": "unplugin-vue-jsx",
   "type": "module",
   "version": "0.10.0",
-  "packageManager": "pnpm@12.4.1",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.5.0",
+      "onFail": "download"
+    }
+  },
   "description": "A Vue JSX plugin.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
